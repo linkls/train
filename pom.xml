@@ -17,6 +17,7 @@
     <modules>
         <module>train-member</module>
         <module>train-common</module>
+        <module>train-gateway</module>
     </modules>
     <properties>
         <java.version>17</java.version>
@@ -43,6 +44,31 @@
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
                 <version>5.8.10</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yaowz</groupId>
+                <artifactId>train-common</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <!-- 集成mybatis-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>3.0.0</version>
+            </dependency>
+            <!-- 集成mysql连接 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.22</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>1.4.6</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
