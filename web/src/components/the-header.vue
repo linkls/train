@@ -1,0 +1,38 @@
+<template>
+	<a-layout-header class="header">
+		<div class="logo" />
+		<a-menu v-model:selectedKeys="selectedKeys1" theme="dark" mode="horizontal" :style="{ lineHeight: '64px' }">
+			<a-menu-item key="1">nav 11</a-menu-item>
+			<a-menu-item key="2">nav 2</a-menu-item>
+			<a-menu-item key="3">nav 3</a-menu-item>
+		</a-menu>
+	</a-layout-header>
+</template>
+
+<script>
+	import {
+		defineComponent,
+		ref
+	} from 'vue';
+	export default defineComponent({
+		name: "the-header-view",
+		setup() {
+			//     let member = store.state.member;
+			//     const selectedKeys = ref([]);
+
+			//     watch(() => router.currentRoute.value.path, (newValue) => {
+			//       console.log('watch', newValue);
+			//       selectedKeys.value = [];
+			//       selectedKeys.value.push(newValue);
+			//     }, {immediate: true});
+			return {
+				// member,
+				// selectedKeys
+				selectedKeys1: ref(['2']),
+			};
+		},
+	});
+</script>
+
+<style>
+</style>
