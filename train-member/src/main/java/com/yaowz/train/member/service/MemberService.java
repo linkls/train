@@ -5,6 +5,7 @@ import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.ObjectUtil;
 import com.yaowz.common.exception.BusinessException;
 import com.yaowz.common.exception.BusinessExceptionEnum;
+import com.yaowz.common.util.JwtUtil;
 import com.yaowz.common.util.SnowUtil;
 import com.yaowz.train.member.domain.Member;
 import com.yaowz.train.member.domain.MemberExample;
@@ -89,8 +90,8 @@ public class MemberService {
         }
 
         MemberLoginResp memberLoginResp = BeanUtil.copyProperties(memberDB, MemberLoginResp.class);
-//        String token = JwtUtil.createToken(memberLoginResp.getId(), memberLoginResp.getMobile());
-//        memberLoginResp.setToken(token);
+        String token = JwtUtil.createToken(memberLoginResp.getId(), memberLoginResp.getMobile());
+        memberLoginResp.setToken(token);
         return memberLoginResp;
     }
 
