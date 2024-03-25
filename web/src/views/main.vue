@@ -1,12 +1,14 @@
 <template>
 	<a-layout id="components-layout-demo-top-side">
 		<the-header-view></the-header-view>
-			<a-layout style="padding: 24px 0; background: #fff">
-				<the-sider-view></the-sider-view>
-				<a-layout-content :style="{ padding: '0 24px', minHeight: '280px' }">
-					Content
-				</a-layout-content>
-			</a-layout>
+    <a-layout>
+      <the-sider-view></the-sider-view>
+      <a-layout-content
+          :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
+      >
+        <router-view></router-view>
+      </a-layout-content>
+    </a-layout>
 		
 		<a-layout-footer style="text-align: center">
 			12306
