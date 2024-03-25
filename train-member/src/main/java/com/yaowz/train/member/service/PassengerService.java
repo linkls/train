@@ -3,6 +3,7 @@ package com.yaowz.train.member.service;
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.date.DateTime;
 import cn.hutool.core.util.ObjectUtil;
+import com.yaowz.common.context.LoginMemberContext;
 import com.yaowz.common.util.SnowUtil;
 import com.yaowz.train.member.domain.Passenger;
 import com.yaowz.train.member.mapper.MemberMapper;
@@ -27,7 +28,7 @@ public class PassengerService {
         DateTime now = DateTime.now();
         Passenger passenger = BeanUtil.copyProperties(req, Passenger.class);
         if (ObjectUtil.isNull(passenger.getId())) {
-//            passenger.setMemberId(LoginMemberContext.getId());
+            passenger.setMemberId(LoginMemberContext.getId());
             passenger.setId(SnowUtil.getSnowflakeNextId());
             passenger.setCreateTime(now);
             passenger.setUpdateTime(now);
