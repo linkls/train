@@ -1,12 +1,12 @@
-package com.yaowz.train.${module}.req;
+package com.yaowz.train.business.req;
 
 import com.yaowz.common.req.PageReq;
 
-public class ${Domain}QueryReq extends PageReq {
+public class TrainStationQueryReq extends PageReq {
 
     @Override
     public String toString() {
-        return "${Domain}QueryReq{" +
+        return "TrainStationQueryReq{" +
                 "} " + super.toString();
     }
 }

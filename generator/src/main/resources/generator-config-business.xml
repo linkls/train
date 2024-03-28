@@ -29,23 +29,23 @@
         </jdbcConnection>
 
         <!-- domain类的位置 targetProject是相对pom.xml的路径-->
-        <javaModelGenerator targetProject="../train-business/src/main/java"
+        <javaModelGenerator targetProject="../business/src/main/java"
                             targetPackage="com.yaowz.train.business.domain"/>
 
         <!-- mapper xml的位置 targetProject是相对pom.xml的路径 -->
-        <sqlMapGenerator targetProject="../train-business/src/main/resources"
+        <sqlMapGenerator targetProject="../business/src/main/resources"
                          targetPackage="mapper"/>
 
         <!-- mapper类的位置 targetProject是相对pom.xml的路径 -->
-        <javaClientGenerator targetProject="../train-business/src/main/java"
+        <javaClientGenerator targetProject="../business/src/main/java"
                              targetPackage="com.yaowz.train.business.mapper"
                              type="XMLMAPPER"/>
 
-        <table tableName="station" domainObjectName="Station"/>
-        <!--<table tableName="train" domainObjectName="Train"/>-->
-        <!--<table tableName="train_station" domainObjectName="TrainStation"/>-->
-        <!--<table tableName="train_carriage" domainObjectName="TrainCarriage"/>-->
-        <!--<table tableName="train_seat" domainObjectName="TrainSeat"/>-->
+<!--        <table tableName="station" domainObjectName="Station"/>-->
+<!--        <table tableName="train" domainObjectName="Train"/>-->
+<!--        <table tableName="train_station" domainObjectName="TrainStation"/>-->
+<!--        <table tableName="train_carriage" domainObjectName="TrainCarriage"/>-->
+        <table tableName="train_seat" domainObjectName="TrainSeat"/>
         <!--<table tableName="daily_train" domainObjectName="DailyTrain"/>-->
         <!--<table tableName="daily_train_station" domainObjectName="DailyTrainStation"/>-->
         <!--<table tableName="daily_train_carriage" domainObjectName="DailyTrainCarriage"/>-->

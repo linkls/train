@@ -1,8 +1,8 @@
 package com.yaowz.train.${module}.controller.admin;
 
-import com.yaowz.train.common.context.LoginMemberContext;
-import com.yaowz.train.common.resp.CommonResp;
-import com.yaowz.train.common.resp.PageResp;
+import com.yaowz.common.context.LoginMemberContext;
+import com.yaowz.common.resp.CommonResp;
+import com.yaowz.common.resp.PageResp;
 import com.yaowz.train.${module}.req.${Domain}QueryReq;
 import com.yaowz.train.${module}.req.${Domain}SaveReq;
 import com.yaowz.train.${module}.resp.${Domain}QueryResp;
