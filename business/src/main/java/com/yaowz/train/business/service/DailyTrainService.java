@@ -45,6 +45,9 @@ public class DailyTrainService {
     @Resource
     private DailyTrainSeatService dailyTrainSeatService;
 
+    @Resource
+    private DailyTrainTicketService dailyTrainTicketService;
+
 
     public void save(DailyTrainSaveReq req) {
         DateTime now = DateTime.now();
@@ -132,8 +135,8 @@ public class DailyTrainService {
         // 生成该车次的座位数据
         dailyTrainSeatService.genDaily(date, train.getCode());
 
-//        // 生成该车次的余票数据
-//        dailyTrainTicketService.genDaily(dailyTrain, date, train.getCode());
+        // 生成该车次的余票数据
+        dailyTrainTicketService.genDaily(dailyTrain, date, train.getCode());
 //
 //        // 生成令牌余量数据
 //        skTokenService.genDaily(date, train.getCode());
