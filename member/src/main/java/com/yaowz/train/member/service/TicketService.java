@@ -14,6 +14,7 @@ import com.yaowz.train.member.mapper.TicketMapper;
 import com.yaowz.train.member.req.TicketQueryReq;
 import com.yaowz.train.member.req.TicketSaveReq;
 import com.yaowz.train.member.resp.TicketQueryResp;
+import io.seata.core.context.RootContext;
 import jakarta.annotation.Resource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,6 +31,7 @@ public class TicketService {
     private TicketMapper ticketMapper;
 
     public void save(TicketSaveReq req) {
+        LOG.info("seata全局事务ID save: {}", RootContext.getXID());
         DateTime now = DateTime.now();
         Ticket ticket = BeanUtil.copyProperties(req, Ticket.class);
         if (ObjectUtil.isNull(ticket.getId())) {
